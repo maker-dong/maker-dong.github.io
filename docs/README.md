@@ -1,3 +1,8 @@
-# Headline
+# Welcome
 
-> An awesome project.
+- 分享知识
+- 记录成长
+- 拓宽视野
+- 精进技术
+
+知识的海岛越大，无知的海岸越长

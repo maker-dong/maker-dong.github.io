@@ -12,4 +12,4 @@
 
 <br/>
 
-[Getting Started](#Headline)
+[Getting Started](#Welcome)

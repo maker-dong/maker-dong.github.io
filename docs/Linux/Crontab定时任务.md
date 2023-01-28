@@ -1,13 +1,13 @@
 # Crontab定时任务
 
 
-## 安装crontab
+# 安装crontab
 ````
 yum install vixie-cron
 yum install crontabs
 ````
 
-## 开启crontab服务
+# 开启crontab服务
 ````
 service crond start //启动服务
 ````
@@ -29,19 +29,19 @@ chkconfig --list crond 
 chkconfig crond off
 ````
 
-## 设置要运行的脚本
+# 设置要运行的脚本
 两种方式：
 - 在命令行输入: crontab -e 然后加入对应的任务，wq存盘退出。 
 - 直接编辑/etc/crontab 文件。即vi /etc/crontab，加入对应的任务。
 > crontab -e配置是针对某个用户的。而编辑/etc/crontab是针对系统的任务 
 
-### 查看调度任务 
+## 查看调度任务 
 ````
 crontab -l //列出当前的全部调度任务 
 crontab -l -u jp //列出用户jp的全部调度任务 
 ````
 
-### 删除任务调度工作 
+## 删除任务调度工作 
 ````
 crontab -r //删除全部任务调度工作 
 ````
@@ -129,7 +129,7 @@ HOME=/
 另外小时位的/1和没有差别，都是每小时一次。 
 假设是设置*/2，实际上是能被2整除的小时数而不是从定时设置開始2小时后运行。比方9点设的到10点就会运行。
 
-## 可能遇到的问题 
+# 可能遇到的问题 
 
 root用户下 输入 crontab -l 显示 
 ````

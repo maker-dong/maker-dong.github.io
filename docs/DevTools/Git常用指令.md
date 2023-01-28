@@ -1,6 +1,6 @@
 # Git常用指令
 
-## 常用指令
+# 常用指令
 - `git clone 地址`
 - `git checkout -b development` 创建本地分支并切换到这个分支
 - `git checkout --track origin/test-dev` 从远程拉分支
@@ -27,7 +27,7 @@
 - `git checkout -b gpf origin/gpf` 新建本地分支gpf与远程gpf分支相关联
 - `git reset --soft HEAD~1` 撤销上一次conmmit，1代表上最近1次，若想撤销最近2次则改为2
 
-## 总结
+# 总结
 
 - 一般我们就用`git push --set-upstream origin branch_name`来在远程创建一个与本地branch_name同名的分支并跟踪；
 - 利用`git checkout --track origin/branch_name`来在本地创建一个与branch_name同名分支跟踪远程分支-

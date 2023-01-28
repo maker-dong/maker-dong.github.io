@@ -1,6 +1,6 @@
 # Docker使用中的小tips
 
-## 修改国内镜像源
+# 修改国内镜像源
 
 > 国内使用dockerhub拉去镜像速度缓慢，为提升效率可切换国内镜像仓库。
 
@@ -34,7 +34,7 @@ systemctl daemon-reload
 systemctl restart docker
 ```
 
-## 镜像编码格式
+# 镜像编码格式
 
 > 有些镜像的编码格式不支持中文，想要使其支持中文，需要修改为`C.UTF-8`格式。
 
@@ -61,7 +61,7 @@ source /etc/profile
 ENV LANG C.UTF-8
 ```
 
-## 镜像时区修改
+# 镜像时区修改
 
 > 一般docker镜像的时间与系统的时间是不一致的，原因是使用的时区不同，系统时区一般为Asia/Shanghai，需要对镜像的时区进行更改。
 
@@ -94,7 +94,7 @@ COPY Shanghai /usr/share/zoneinfo/Asia/
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ```
 
-## 镜像的导入与导出
+# 镜像的导入与导出
 
 > 有时需要在一些特殊的环境下（如不能连接外网）使用docker，这就需要在一台能联网的机器上将镜像拉取后进行导出，拷贝到目标机器上再进行导入。
 
@@ -124,7 +124,7 @@ docker load < 导出文件名.tar
 docker load < flink-image.tar
 ```
 
-## 批量删除docker镜像/容器
+# 批量删除docker镜像/容器
 
 > 有时我们需要批量删除docker中的容器或镜像，比如删库跑路的时候（不是）
 

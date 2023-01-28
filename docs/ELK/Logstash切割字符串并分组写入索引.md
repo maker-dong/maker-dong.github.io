@@ -1,7 +1,7 @@
 # Logstash切割字符串并分组写入索引
 
 
-## Logstash配置改造
+# Logstash配置改造
 
 改造之前我们将nginx日志按照日期进行了分割，做到每天一个索引，实现方法是在Logstash配置文件的output中将日期写入到索引名称中：
 
@@ -27,7 +27,7 @@
 
 接下来我们将一步一步进行处理。
 
-### 1 切分url，获取项目组名称
+## 1 切分url，获取项目组名称
 
 通过查看Logstash mutate的相关资料，mutate中提供一个split方法，可以对字符串进行切割。
 
@@ -102,7 +102,7 @@ mutate {
 
 此时group获取完成。
 
-### 2 将项目组名称与省份标识进行映射
+## 2 将项目组名称与省份标识进行映射
 
 我们上面说过，省份标识与项目组名称是一对多的关系，所以需要进行项目组名与省份标识的映射。为了区分两个字段，由于省份标识是要体现在索引名称上的，这里我们为其命名为index-group。此处我用了个比较笨的方法进行映射，就是通过对不同的group进行条件判断，从而确定index-group的内容。
 
@@ -159,7 +159,7 @@ if [group] in "mcs,ubp,ubp-2021" {
 
 最后再通过else进行兜底，将不属于上述提到的组的数据统一设置给default组。
 
-### 3 将省份标识拼接到索引名称
+## 3 将省份标识拼接到索引名称
 
 到此我们已经将数据按照省份进行了“打标签”，接下来在写入索引时将index-group字段写入索引名称就大功告成了。
 
@@ -177,6 +177,6 @@ if [type] == "nginx-log" {
 
 
 
-## 参考资料
+# 参考资料
 
 - [elastic官方文档plugins-filters-mutate](https://www.elastic.co/guide/en/logstash/current/plugins-filters-mutate.html)

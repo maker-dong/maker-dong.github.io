@@ -5,7 +5,7 @@ elasticdump是一款开源的es数据导入与导出工具。
 
 项目地址：[elasticdump](https://github.com/elasticsearch-dump/elasticsearch-dump)
 
-## 安装
+# 安装
 
 elasticdump基于npm实现，可以使用npm进行安装，官方也提供docker镜像。
 
@@ -23,9 +23,9 @@ docker pull taskrabbit/elasticsearch-dump
 
 在此为了方便，我使用docker进行安装。
 
-## 导出
+# 导出
 
-### 数据导出
+## 数据导出
 
 先给一个**示例**：
 
@@ -51,7 +51,7 @@ taskrabbit/elasticsearch-dump			镜像名称
 
 以上是一个比较简单的导出。
 
-### 按条件导出数据
+## 按条件导出数据
 
 如果要想在导出时加入查询筛选，需要添加`--searchBody`字段。
 
@@ -94,7 +94,7 @@ docker run --rm -d -v /root/mnt/elasticsearch/data:/tmp taskrabbit/elasticsearch
 
 此处我就是要导出`"body_bytes_sent": "cmgs"`并且时间范围在2022-05-01T00:00:00.000+08:00~2022-06-01T00:00:00.000+08:00的数据。以此类推，可以添加各种的查询作为导出条件。
 
-### 模板导出
+## 模板导出
 
 索引模板的导出与索引数据的导出几乎是一样的，给出一个实例：
 
@@ -107,9 +107,9 @@ docker run --rm -ti -v /root/mnt/elasticsearch/data:/tmp taskrabbit/elasticsearc
 
 注意此处要将`--type`指定为`template`类型。
 
-## 导入
+# 导入
 
-### 数据导入
+## 数据导入
 
 数据的导入就是要把导出时的input与output进行调换，将导出的文件作为导入时的input。
 
@@ -120,7 +120,7 @@ docker run --rm -ti -v /root/mnt/elasticsearch/data:/tmp taskrabbit/elasticsearc
 --type=data
 ```
 
-### 模板导入
+## 模板导入
 
 索引模板的导入跟数据的导入几乎一样，注意要把`--type`指定为`template`类型。
 
@@ -133,7 +133,7 @@ docker run --rm -ti -v /root/mnt/elasticsearch/data:/tmp taskrabbit/elasticsearc
 
 
 
-## 附 elasticdump参数表
+# 附 elasticdump参数表
 
 ```
 命令

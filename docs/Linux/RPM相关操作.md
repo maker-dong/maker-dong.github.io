@@ -1,6 +1,6 @@
 # RPM相关操作
 
-## RPM 安装操作
+# RPM 安装操作
 命令：
 ````
 rpm -i 需要安装的包文件名
@@ -13,7 +13,7 @@ rpm -iv example.rpm 安装 example.rpm 包并在安装过程中显示正在安�
 rpm -ivh example.rpm 安装 example.rpm 包并在安装过程中显示正在安装的文件信息及安装进度；
 ```
 
-## RPM 查询操作
+# RPM 查询操作
 
 命令：
 
@@ -39,7 +39,7 @@ rpm -qif /bin/df 查看/bin/df 文件所在安装包的信息；
 rpm -qlf /bin/df 查看/bin/df 文件所在安装包中的各个文件分别被安装到哪个目录下；
 ```
 
-## RPM 卸载操作
+# RPM 卸载操作
 
 命令：
 
@@ -54,7 +54,7 @@ rpm -e 需要卸载的安装包
 rpm -e tomcat4 卸载 tomcat4 软件包
 ```
 
-## RPM 升级操作
+# RPM 升级操作
 
 命令：
 
@@ -68,7 +68,7 @@ rpm -U 需要升级的包
 rpm -Uvh example.rpm 升级 example.rpm 软件包
 ```
 
-## RPM 验证操作
+# RPM 验证操作
 
 命令：
 

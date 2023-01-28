@@ -1,11 +1,11 @@
 # Linux添加用户
 
-## 添加用户
+# 添加用户
 ````
 adduser prefma 
 ````
 
-## 设置密码
+# 设置密码
 ````
 passwd prefma
 Changing password for user prefma.

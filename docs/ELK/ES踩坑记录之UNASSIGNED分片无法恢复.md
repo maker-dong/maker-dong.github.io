@@ -1,6 +1,6 @@
 # ES踩坑记录之UNASSIGNED分片无法恢复
 
-## unassigned问题现象
+# unassigned问题现象
 
 
 ```shell
@@ -11,9 +11,9 @@ curl -XGET http://localhost:9200/_cat/shards | grep UNASSIGNED
 
 
 
-## 问题排查
+# 问题排查
 
-### 分片恢复并发数:x:
+## 分片恢复并发数:x:
 
 既然出现Unassigned shards，也就是说有一些分片未被分片。期初我们想当然的认为应该是节点新加入集群，分片还没有完成恢复。为了加速分片分配，我们调大了分片恢复并发数。
 
@@ -29,7 +29,7 @@ curl -XPUT http://localhost:9200/_cluster/settings -H 'Content-Type: application
 
 然而并没有什么卵用，等了半天还是没什么变化。
 
-### allocation explain
+## allocation explain
 
 随后我们使用`allocation explain`指令来查看分片的分配状态
 
@@ -76,11 +76,11 @@ curl -XGET http://localhost:9200/XXX-2022.03.15/_settings
 
 好家伙，我直接好家伙，合着我们还指望ES容灾呢，这还容个锤子灾。破案了，问题找到了，但数据也是找不回来了。
 
-## 解决方案
+# 解决方案
 
 数据是找不回来了，但集群也不能一直red啊，还有180多个unassigned的分片得处理呢。
 
-### reroute:x:
+## reroute:x:
 
 通过在网上搜索相关的解决方案，得知可以通过重建所以路由是可以解决问题的。
 
@@ -106,7 +106,7 @@ curl -H 'Content-Type: application/json' \
 
 这意味着什么呢，就是说除非丢失的节点重新加入集群，否则数据将消失。
 
-### allocate_empty_primary 
+## allocate_empty_primary 
 
 数据是没法恢复了，所以我们只能将分片进行清空处理了。
 
@@ -126,7 +126,7 @@ curl -H 'Content-Type: application/json' \
 }'
 ```
 
-### 删除索引
+## 删除索引
 
 还有一种更彻底的解决方案，就是把坏了的索引都删了就完事了，反正数据也没有了，没有数据的索引跟咸鱼有什么两样？眼不见为净完事了。
 
@@ -134,7 +134,7 @@ curl -H 'Content-Type: application/json' \
 
 
 
-## 参考资料
+# 参考资料
 
 - [ElasticSearch Node Failure - Stackover Flow](https://stackoverflow.com/questions/58758088/elasticsearch-node-failure)
 - [ES分片被删除后如何恢复 - CSDN](https://blog.csdn.net/TuDestiny/article/details/103479061)

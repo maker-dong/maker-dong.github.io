@@ -1,6 +1,6 @@
 # ES索引模板
 
-## 创建索引模板
+# 创建索引模板
 
 ````
 PUT _template/fruits_template
@@ -38,7 +38,7 @@ PUT _template/fruits_template
 }
 ````
 
-## 查看索引模板
+# 查看索引模板
 
 ````
 GET _template // 查看所有模板
@@ -50,7 +50,7 @@ GET _template/temp1,temp2 // 查看多个模板
 GET _template/fruits_template // 查看指定模板
 ````
 
-## 判断模板是否存在:
+# 判断模板是否存在:
 
 ````
 HEAD _template/fruits_tem
@@ -61,7 +61,7 @@ HEAD _template/fruits_tem
 - 如果存在, 响应结果是: 200 - OK
 - 如果不存在, 响应结果是: 404 - Not Found
 
-## 删除索引模板
+# 删除索引模板
 
 ````
 DELETE _template/fruits_template // 删除上述创建的模板

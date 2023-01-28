@@ -1,7 +1,7 @@
 # Linux 添加与修改用户归属组
 参考资源：https://cnzhx.net/blog/linux-add-user-to-group/
 
-## 已存在的用户
+# 已存在的用户
 1. 以root进行登录
 2. 打开终端
 3. 修改分组
@@ -22,7 +22,7 @@ gpasswd -d huang root  
 ````
 注意：这个时候需要保证 group 不是 user 的主组。
 
-## 没有存在的用户
+# 没有存在的用户
 1. 新建用户并归属组
 ````
 useradd -G root huang

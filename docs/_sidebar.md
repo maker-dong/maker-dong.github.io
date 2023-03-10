@@ -43,4 +43,5 @@
   - [Kubernetes集群安装指北](CloudNative&Container/Kubernetes集群安装指北)
 - **DevTools**
   - [Git常用指令](DevTools/Git常用指令)
+  - [常用DNS](DevTools/常用DNS)
 

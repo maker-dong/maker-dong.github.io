@@ -41,6 +41,7 @@
   - [Vim相关指令](Linux/Vim相关指令)
 - **CloudNative&Container**
   - [Docker使用中的小tips](CloudNative&Container/Docker使用中的小tips)
+  - [docker-compose安装](CloudNative&Container/docker-compose安装)
   - [Kubernetes集群安装指北](CloudNative&Container/Kubernetes集群安装指北)
 - **DevTools**
   - [Git常用指令](DevTools/Git常用指令)

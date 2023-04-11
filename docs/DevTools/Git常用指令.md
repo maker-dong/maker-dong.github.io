@@ -201,3 +201,14 @@ git merge --squash 分支
 git log --graph --left-right --cherry-pick --oneline HEAD...feature/120-on-scroll  
 ```
 
+## 将历史提交创建新分支
+
+```
+git checkout -b 新分支名 提交版本号
+如：git checkout -b new-branc f5e86fbf455960c40e759c48bb0675b54d808632
+# 查看当前分支
+git branch
+# 推送分支到远程
+git push origin 本地新分支名:远程新分支名
+```
+

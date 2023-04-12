@@ -162,6 +162,42 @@ GET /索引名/_search
 - `lt` -  `<`
 - `lte` - `<=`
 
+## 前缀查询
+
+```
+GET /索引名/_search
+{
+    "query": {
+        "prefix": {
+            "FIELD": "VALUE"
+        }
+    }
+}
+```
+
+说明：
+
+- `prefix`：实现前缀查询
+- `FIELD`：要匹配的字段
+- `VALUE`：需要匹配的内容
+
+## 通配符查询
+
+```
+GET /索引名/_search
+{
+    "query": {
+        "wildcard": {
+            "FIELD": "*abc"
+        }
+    }
+}
+```
+
+- `wildcard`：实现通配符查询
+- `FIELD`：要匹配的字段
+- `VALUE`：需要匹配的内容（需要包含通配符）
+
 ## bool组合查询
 
 ES通过bool查询实现多条件的组合。

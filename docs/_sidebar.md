@@ -20,6 +20,7 @@
   - [ES远程集群设置与使用](ELK/ES远程集群设置与使用)
   - [ES集群健康状态解析](ELK/ES集群健康状态解析)
   - [ES集群滚动重启策略](ELK/ES集群滚动重启策略)
+  - [ES安装问题汇总](ELK/ES安装问题汇总)
   - [ES踩坑记录之UNASSIGNED分片无法恢复](ELK/ES踩坑记录之UNASSIGNED分片无法恢复)
   - [ES采坑记录之maximum_shards_open](ELK/ES采坑记录之maximum_shards_open)
   - [ES导入导出工具elasticdump](ELK/ES导入导出工具elasticdump简单使用说明)

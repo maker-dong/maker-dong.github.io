@@ -1,3 +1,6 @@
+![logo](_media/icon.svg)
+
+<br/>
 
 # CoolCode知识库 
 
@@ -7,8 +10,10 @@
 
 <br/>
 
-- powered by 
-- **Maker Dong**
+- [From **Maker Dong**](https://www.coolcode.fun/)
+
+
+- [Powered by docsify](https://docsify.js.org/)
 
 <br/>
 

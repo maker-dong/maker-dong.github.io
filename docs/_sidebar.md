@@ -13,6 +13,7 @@
   - [Spark性能优化](Spark/6-Spark性能优化)
 - **ELK**
   - [ES查询语句](ELK/ES查询语句)
+  - [ES删除文档](ELK/ES删除文档)
   - [ES索引的分区与副本](ELK/ES索引的分区与副本)
   - [ES中的倒排索引机制](ELK/ES中的倒排索引机制)
   - [ES索引模板](ELK/ES索引模板)

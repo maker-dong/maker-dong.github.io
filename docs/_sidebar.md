@@ -46,9 +46,11 @@
   - [Docker使用中的小tips](CloudNative&Container/Docker使用中的小tips)
   - [docker-compose安装](CloudNative&Container/docker-compose安装)
   - [Kubernetes集群安装指北](CloudNative&Container/Kubernetes集群安装指北)
+- **Scala**
+  - [Scala基本语法](Scala/Scala基本语法)
+  - [Scala进阶用法](Scala/Scala进阶用法)
 - **DevTools**
   - [Git常用指令](DevTools/Git常用指令)
   - [常用DNS](DevTools/常用DNS)
-
 - **Other**
   - [HTTP返回码](Other/HTTP返回码)

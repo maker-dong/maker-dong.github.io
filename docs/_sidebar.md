@@ -51,6 +51,7 @@
   - [Scala进阶用法](Scala/Scala进阶用法)
 - **DevTools**
   - [Git常用指令](DevTools/Git常用指令)
+  - [Git设置用户名与代理](DevTools/Git设置用户名与代理)
   - [常用DNS](DevTools/常用DNS)
 - **Other**
   - [HTTP返回码](Other/HTTP返回码)

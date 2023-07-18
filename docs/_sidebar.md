@@ -25,6 +25,7 @@
   - [ES安装问题汇总](ELK/ES安装问题汇总)
   - [ES踩坑记录之UNASSIGNED分片无法恢复](ELK/ES踩坑记录之UNASSIGNED分片无法恢复)
   - [ES采坑记录之maximum_shards_open](ELK/ES采坑记录之maximum_shards_open)
+  - [ES踩坑记录之集群间通信异常造成节点无法加入](ELK/ES踩坑记录之集群间通信异常造成节点无法加入)
   - [ES导入导出工具elasticdump](ELK/ES导入导出工具elasticdump简单使用说明)
   - [Logstash切割字符串并分组写入索引](ELK/Logstash切割字符串并分组写入索引)
   - [Logstash日期格式转化](ELK/Logstash日期格式转化)

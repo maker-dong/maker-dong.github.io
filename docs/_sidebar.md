@@ -52,6 +52,7 @@
   - [Scala进阶用法](Scala/Scala进阶用法)
 - **Python**
   - [Python离线安装依赖包](Python/Python离线安装依赖包)
+  - [Python修改镜像源](Python/Python修改镜像源)
 - **DevTools**
   - [Git常用指令](DevTools/Git常用指令)
   - [Git设置用户名与代理](DevTools/Git设置用户名与代理)

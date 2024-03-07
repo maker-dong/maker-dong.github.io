@@ -1,33 +1,103 @@
-# ES集群健康状态解析
+# ES集群状态维护
 
 
-# ES健康查询
+# ES状态查询
 
 - 查看集群健康
 
   ```
-  /_cluster/health
+  GET /_cluster/health
   ```
 
 - 查看索引健康
 
   ```
-  /_cluster/health?pretty&level=indices
+  GET /_cluster/health?pretty&level=indices
   ```
 
 - 查看分片监健康
 
   ```
-  /_cluster/health?pretty&level=shards
+  GET /_cluster/health?pretty&level=shards
+  ```
+
+- 查看集群数据统计
+
+  ```
+  GET /_cluster/stats
+  ```
+
+- 查看节点信息
+
+  ```
+  GET /_cat/nodes?v=true
+  ```
+
+  - heap.percent：配置的最大堆内存
+  - ram.percent：已用总内存百分比
+  - load_1m：最近的平均负载
+  - load_5m：最近5分钟内的平均负载
+  - load_15m：最近15分钟内的平均负载
+    - node.role：节点的角色
+    - c（冷节点）
+    - d（数据节点）
+    - f（冻结节点）
+    - h（热节点）
+    - i（摄取节点）
+    - l（机器学习节点）
+    - m（主节点）
+    - r（远程集群客户端节点）
+    - s（内容节点）
+    - t（转换节点）
+    - v（仅投票节点）
+    - w（热节点）
+    -  -（仅协调节点）
+
+- 查看索引信息
+
+  ```
+  GET /_cat/indices/xxx*
+  ```
+
+# 集群维护
+
+可参考[ES集群滚动重启策略](ES集群滚动重启策略)
+
+- 停止分片自平衡
+
+  ```
+  PUT /_cluster/settings
+  {
+    "transient": {
+      "cluster.routing.rebalance.enable": "none"
+    }
+  }
+  ```
+
+- 开启分配自平衡
+
+  ```
+  PUT /_cluster/settings
+  {
+    "transient": {
+      "cluster.routing.rebalance.enable": "all"
+    }
+  }
+  ```
+
+- 查看集群设置
+
+  ```
+  GET /_cluster/settings
   ```
 
 - 查看恢复情况
 
   ```
-  /_recovery?pretty
+  GET /_recovery?pretty
   ```
 
-# 集群健康
+# 集群健康指标解析
 
 `/_cluster/health`是最常用的ES集群健康度查询的指令，返回如下：
 
